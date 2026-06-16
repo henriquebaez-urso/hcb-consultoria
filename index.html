@@ -3,26 +3,253 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HCB Eventos</title>
-  <meta name="description" content="HCB Eventos — página institucional em construção." />
+  <title>HCB Eventos | Produção e Organização de Eventos</title>
+  <meta name="description" content="HCB Eventos — produção, organização e apoio operacional para eventos sociais, corporativos e projetos especiais." />
   <meta property="og:title" content="HCB Eventos" />
-  <meta property="og:description" content="Página institucional em construção." />
+  <meta property="og:description" content="Produção, organização e apoio operacional para eventos sociais, corporativos e projetos especiais." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://urso71.com" />
   <style>
-    :root { --bg:#0b1220; --text:#f8fafc; --muted:#cbd5e1; --accent:#e7c85f; --line:rgba(255,255,255,.14); }
+    :root {
+      --bg: #0b1220;
+      --panel: rgba(15, 23, 42, .84);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --soft: #94a3b8;
+      --accent: #d6b253;
+      --accent2: #f0d77a;
+      --line: rgba(255,255,255,.14);
+    }
     * { box-sizing: border-box; }
-    body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:28px; font-family:Arial, Helvetica, sans-serif; color:var(--text); background:linear-gradient(135deg,#08111f,#111827 58%,#1f2937); }
-    main { width:min(720px,100%); border:1px solid var(--line); border-radius:24px; padding:42px; background:rgba(15,23,42,.82); box-shadow:0 24px 80px rgba(0,0,0,.28); }
-    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.18em; font-size:13px; font-weight:800; margin-bottom:18px; }
-    h1 { margin:0; font-size:clamp(44px,8vw,76px); line-height:.95; letter-spacing:-.05em; }
-    p { color:var(--muted); font-size:19px; line-height:1.6; margin:26px 0 0; max-width:620px; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 12%, rgba(214,178,83,.20), transparent 28%),
+        radial-gradient(circle at 82% 18%, rgba(96,165,250,.12), transparent 30%),
+        linear-gradient(135deg, #08111f 0%, #111827 58%, #1f2937 100%);
+      min-height: 100vh;
+    }
+    .wrap { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+    header {
+      padding: 26px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .brand { font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
+    nav a:hover { color: var(--text); }
+    .hero {
+      padding: 84px 0 56px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 34px;
+      align-items: end;
+    }
+    .eyebrow {
+      color: var(--accent2);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(44px, 7.4vw, 86px);
+      line-height: .94;
+      letter-spacing: -.055em;
+      max-width: 860px;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: clamp(18px, 2.1vw, 22px);
+      line-height: 1.55;
+      max-width: 760px;
+      margin: 28px 0 0;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.28);
+      backdrop-filter: blur(10px);
+    }
+    .card strong { display: block; font-size: 18px; margin-bottom: 10px; }
+    .card p { color: var(--muted); line-height: 1.6; margin: 0; }
+    section { padding: 34px 0; }
+    h2 { margin: 0 0 18px; font-size: 30px; letter-spacing: -.03em; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .item {
+      min-height: 160px;
+      border: 1px solid var(--line);
+      background: rgba(15, 23, 42, .58);
+      border-radius: 18px;
+      padding: 22px;
+    }
+    .item strong { display: block; margin-bottom: 10px; font-size: 17px; }
+    .item span { color: var(--muted); line-height: 1.5; }
+    .about {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 22px;
+      align-items: start;
+    }
+    .about p { color: var(--muted); font-size: 17px; line-height: 1.7; margin: 0 0 14px; }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .step {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      background: rgba(255,255,255,.03);
+    }
+    .step b { display: block; color: var(--accent2); font-size: 24px; margin-bottom: 6px; }
+    .step span { color: var(--muted); font-size: 14px; line-height: 1.45; }
+    .contact {
+      margin: 34px 0 54px;
+      padding: 30px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(214,178,83,.16), rgba(15,23,42,.78));
+      border: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .contact p { margin: 6px 0 0; color: var(--muted); }
+    .button {
+      display: inline-block;
+      background: var(--accent2);
+      color: #0b1220;
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 999px;
+      padding: 14px 22px;
+      white-space: nowrap;
+    }
+    footer { border-top: 1px solid var(--line); padding: 24px 0 34px; color: var(--soft); font-size: 14px; }
+    @media (max-width: 900px) {
+      header { align-items: flex-start; flex-direction: column; }
+      .hero, .about, .grid, .steps { grid-template-columns: 1fr; }
+      .hero { padding-top: 48px; }
+      .contact { align-items: flex-start; flex-direction: column; }
+    }
   </style>
 </head>
 <body>
+  <header class="wrap">
+    <div class="brand">HCB Eventos</div>
+    <nav aria-label="Navegação principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
   <main>
-    <div class="eyebrow">Página institucional</div>
-    <h1>HCB Eventos</h1>
-    <p>Site em construção.</p>
+    <section class="hero wrap">
+      <div>
+        <div class="eyebrow">Produção • Organização • Execução</div>
+        <h1>Eventos bem planejados, do briefing à entrega.</h1>
+        <p class="lead">
+          A HCB Eventos atua na organização, produção e apoio operacional de eventos sociais,
+          corporativos e projetos especiais, com foco em planejamento, fornecedores, execução e cuidado com os detalhes.
+        </p>
+      </div>
+      <aside class="card">
+        <strong>Estrutura simples, execução profissional</strong>
+        <p>
+          Trabalhamos para transformar ideias em eventos viáveis, organizados e bem conduzidos,
+          com comunicação clara e acompanhamento em cada etapa.
+        </p>
+      </aside>
+    </section>
+
+    <section id="servicos" class="wrap">
+      <h2>Serviços</h2>
+      <div class="grid">
+        <div class="item">
+          <strong>Eventos sociais</strong>
+          <span>Organização e apoio para celebrações, encontros, recepções e ocasiões especiais.</span>
+        </div>
+        <div class="item">
+          <strong>Eventos corporativos</strong>
+          <span>Produção de reuniões, ações institucionais, ativações, confraternizações e experiências de relacionamento.</span>
+        </div>
+        <div class="item">
+          <strong>Produção operacional</strong>
+          <span>Coordenação de fornecedores, cronograma, montagem, execução, desmontagem e suporte no dia do evento.</span>
+        </div>
+        <div class="item">
+          <strong>Planejamento</strong>
+          <span>Definição de escopo, orçamento, formato, necessidades operacionais e plano de execução.</span>
+        </div>
+        <div class="item">
+          <strong>Fornecedores</strong>
+          <span>Apoio na busca, negociação e alinhamento com fornecedores conforme o perfil do projeto.</span>
+        </div>
+        <div class="item">
+          <strong>Projetos especiais</strong>
+          <span>Soluções sob demanda para eventos de pequeno, médio ou grande porte.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="wrap about">
+      <div>
+        <h2>Como trabalhamos</h2>
+      </div>
+      <div>
+        <p>
+          A HCB Eventos combina organização, senso prático e atenção à experiência para apoiar clientes que precisam
+          tirar um evento do papel com segurança, clareza e bom gosto.
+        </p>
+        <p>
+          Nosso papel é simplificar a execução: entender o objetivo, estruturar o plano, alinhar fornecedores
+          e acompanhar a operação para que cada etapa aconteça com fluidez.
+        </p>
+        <div class="steps">
+          <div class="step"><b>1</b><span>Entendimento do briefing</span></div>
+          <div class="step"><b>2</b><span>Planejamento e orçamento</span></div>
+          <div class="step"><b>3</b><span>Produção e fornecedores</span></div>
+          <div class="step"><b>4</b><span>Execução do evento</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="wrap contact">
+      <div>
+        <h2>Contato</h2>
+        <p>Para eventos, produção e projetos especiais.</p>
+        <p><strong>E-mail:</strong> henrique.baez@urso71.com</p>
+      </div>
+      <a class="button" href="mailto:henrique.baez@urso71.com">Falar com a HCB Eventos</a>
+    </section>
   </main>
+
+  <footer class="wrap">
+    © <span id="year"></span> HCB Eventos. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
