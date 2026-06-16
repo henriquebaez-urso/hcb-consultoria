@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HCB Eventos | Consultoria para Shopping Centers</title>
+  <meta name="description" content="HCB Eventos — consultoria estratégica para shopping centers, varejo, operações, comercial, reposicionamento e experiência do consumidor." />
+  <meta property="og:title" content="HCB Eventos" />
+  <meta property="og:description" content="Consultoria estratégica para shopping centers, varejo e ativos comerciais." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://urso71.com" />
+  <style>
+    :root {
+      --bg: #08111f;
+      --panel: rgba(15, 23, 42, .84);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --soft: #94a3b8;
+      --accent: #c9a227;
+      --accent2: #e7c85f;
+      --line: rgba(255,255,255,.13);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 18% 10%, rgba(201,162,39,.18), transparent 26%),
+        radial-gradient(circle at 82% 20%, rgba(59,130,246,.10), transparent 30%),
+        linear-gradient(135deg, #08111f 0%, #111827 58%, #1f2937 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .wrap { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+    header {
+      padding: 26px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand { font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    nav { display: flex; gap: 18px; flex-wrap: wrap; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
+    nav a:hover { color: var(--text); }
+    .hero {
+      padding: 86px 0 58px;
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 32px;
+      align-items: end;
+    }
+    .eyebrow {
+      color: var(--accent2);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(44px, 7.6vw, 88px);
+      line-height: .94;
+      letter-spacing: -.06em;
+      max-width: 860px;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: clamp(18px, 2.1vw, 22px);
+      line-height: 1.55;
+      max-width: 790px;
+      margin: 28px 0 0;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.28);
+      backdrop-filter: blur(10px);
+    }
+    .card strong { display: block; font-size: 18px; margin-bottom: 10px; }
+    .card p { color: var(--muted); line-height: 1.55; margin: 0; }
+    section { padding: 34px 0; }
+    h2 { font-size: 30px; margin: 0 0 18px; letter-spacing: -.03em; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .item {
+      border: 1px solid var(--line);
+      background: rgba(15, 23, 42, .56);
+      border-radius: 18px;
+      padding: 22px;
+      min-height: 172px;
+    }
+    .item strong { display: block; margin-bottom: 10px; font-size: 17px; }
+    .item span { color: var(--muted); line-height: 1.5; }
+    .about {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .about p { color: var(--muted); font-size: 17px; line-height: 1.7; margin: 0 0 14px; }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      background: rgba(255,255,255,.03);
+    }
+    .metric b { display: block; font-size: 24px; color: var(--accent2); margin-bottom: 6px; }
+    .metric span { color: var(--muted); font-size: 14px; line-height: 1.4; }
+    .contact {
+      margin: 34px 0 54px;
+      padding: 30px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(201,162,39,.16), rgba(15,23,42,.76));
+      border: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .contact p { margin: 6px 0 0; color: var(--muted); }
+    .button {
+      display: inline-block;
+      background: var(--accent2);
+      color: #0b1220;
+      text-decoration: none;
+      font-weight: 800;
+      border-radius: 999px;
+      padding: 14px 22px;
+      white-space: nowrap;
+    }
+    footer { border-top: 1px solid var(--line); padding: 24px 0 34px; color: var(--soft); font-size: 14px; }
+    @media (max-width: 900px) {
+      .hero, .about, .grid, .metrics { grid-template-columns: 1fr; }
+      .hero { padding-top: 48px; }
+      .contact { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="brand">HCB Eventos</div>
+    <nav aria-label="Navegação principal">
+      <a href="#servicos">Atuação</a>
+      <a href="#sobre">Experiência</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div>
+        <div class="eyebrow">Shopping Centers • Varejo • Gestão de Ativos</div>
+        <h1>Consultoria estratégica para shopping centers.</h1>
+        <p class="lead">
+          A HCB Eventos apoia empreendedores, administradoras e operadores de ativos comerciais em decisões
+          de posicionamento, mix, comercialização, operação, relacionamento com lojistas e experiência do consumidor.
+        </p>
+      </div>
+      <aside class="card">
+        <strong>Visão executiva com repertório de operação real</strong>
+        <p>
+          Mais de duas décadas na indústria de shopping centers, passando por ativos de diferentes perfis,
+          públicos e momentos de negócio — da expansão e revitalização à gestão diária da performance.
+        </p>
+      </aside>
+    </section>
+
+    <section id="servicos" class="wrap">
+      <h2>Frentes de atuação</h2>
+      <div class="grid">
+        <div class="item">
+          <strong>Estratégia e posicionamento</strong>
+          <span>Leitura do ativo, vocação, público, concorrência, diferenciação, reposicionamento e agenda de valor.</span>
+        </div>
+        <div class="item">
+          <strong>Mix, comercial e lojistas</strong>
+          <span>Análise de mix, oportunidades comerciais, relacionamento com lojistas, ocupação, expansão e qualificação da oferta.</span>
+        </div>
+        <div class="item">
+          <strong>Operação e experiência</strong>
+          <span>Rotina operacional, jornada do cliente, serviços, gastronomia, entretenimento, wellness e melhoria da experiência.</span>
+        </div>
+        <div class="item">
+          <strong>Performance e gestão</strong>
+          <span>Indicadores, vendas, fluxo, CRM, fidelidade, planos de ação e governança orientada a decisão.</span>
+        </div>
+        <div class="item">
+          <strong>Revitalização e expansão</strong>
+          <span>Apoio em diagnósticos, projetos de transformação, novas áreas, ajustes de ABL e evolução do ativo.</span>
+        </div>
+        <div class="item">
+          <strong>Treinamento e times</strong>
+          <span>Formação comercial, desenvolvimento de equipes, cultura de atendimento e repertório prático de varejo.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="wrap about">
+      <div>
+        <h2>Experiência aplicada ao negócio</h2>
+      </div>
+      <div>
+        <p>
+          A HCB Eventos é conduzida por Henrique Baez, executivo sênior com trajetória construída no varejo,
+          treinamento comercial, expansão de franquias e gestão de shopping centers no Rio de Janeiro.
+        </p>
+        <p>
+          A proposta é simples: combinar visão estratégica, pragmatismo operacional e conhecimento de campo
+          para apoiar decisões que melhorem relevância, eficiência, ocupação, experiência e resultado dos ativos.
+        </p>
+        <div class="metrics">
+          <div class="metric"><b>20+</b><span>anos em shopping centers</span></div>
+          <div class="metric"><b>1989</b><span>início no varejo</span></div>
+          <div class="metric"><b>B/C a A</b><span>experiência com diferentes públicos</span></div>
+          <div class="metric"><b>RJ</b><span>atuação em ativos relevantes</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="wrap contact">
+      <div>
+        <h2>Contato</h2>
+        <p>Para consultoria, diagnóstico ou projetos especiais em shopping centers e varejo.</p>
+        <p><strong>E-mail:</strong> henrique.baez@urso71.com</p>
+      </div>
+      <a class="button" href="mailto:henrique.baez@urso71.com">Falar com a HCB Eventos</a>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    © <span id="year"></span> HCB Eventos. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
